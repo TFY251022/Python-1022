@@ -1,14 +1,24 @@
-# 計算幾次方
+def get_discount(total, discount):
+    if total >= 2000:
+        total -= discount * (total//2000)
 
+    return total
 
+# print(__name__)
 
-# 簡單斷句
+if __name__ == "__main__":
+    # 測試模組
+    data = [
+        {
+            "total": 6000,
+            "discount": 200
+        },
+        {
+            "total": 8000,
+            "discount": 200
+        }
+    ]
 
-
-
-
-
-
-# 測試模組
-
-
+    for d in data:
+        answer = get_discount(d["total"], d["discount"])
+        print(f"折扣後金額: {answer}元")
